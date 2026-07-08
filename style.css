@@ -23,7 +23,7 @@ main{
   /* padding: 1rem 1rem; */
 }
 nav{
-/* width: min(95% ,1200px);  use in mobile 1 approch */ */
+/* width: min(95% ,1200px);  use in mobile 1 approch */ 
   width: 100%;
   border: 0.1rem solid black;
   display: flex;
