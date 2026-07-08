@@ -232,8 +232,8 @@ width: clamp(15rem, 18vw, 20rem);
 .card-container1:nth-of-type(2) .card {
     background: #C8E892;
 }
-.card-container1:nth-of-type(3) h2{
-  font-size: 1rem;
+.card-container1:nth-of-type(3) {
+  height: 60.5vh;
 }
 .card-container1:nth-of-type(3) .card {
     background: #B1E8C1;
@@ -243,8 +243,11 @@ width: clamp(15rem, 18vw, 20rem);
     background: #CCE3FF;
     height: 40vh;
 }
+.card-container1:nth-of-type(4) h2{
+  font-size: 1.4rem;
+}
 .card-container1:nth-of-type(4) p{
-  font-size: clamp(0.7rem,2vw ,1.5rem);
+  font-size: clamp(0.7rem,1.9vw ,1.5rem);
 }
 .card img{
    object-fit: cover;
