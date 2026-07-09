@@ -203,7 +203,7 @@ justify-content:center;
     display: none;              /* Chrome, Safari, Edge */
 }
 .card-container1{
-  background-color:red;
+  background-color:transparent;
 width: clamp(15rem, 18vw, 20rem);
   height: 58vh;
   display: flex;
