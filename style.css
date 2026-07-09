@@ -203,7 +203,7 @@ justify-content:center;
     display: none;              /* Chrome, Safari, Edge */
 }
 .card-container1{
-  background-color:transparent;
+  background-color:red;
 width: clamp(15rem, 18vw, 20rem);
   height: 58vh;
   display: flex;
@@ -231,6 +231,9 @@ width: clamp(15rem, 18vw, 20rem);
 }
 .card-container1:nth-of-type(2) .card {
     background: #C8E892;
+}
+.card-container1:nth-of-type(3) h2{
+  font-size: 1.5rem;
 }
 .card-container1:nth-of-type(3) {
   height: 60.5vh;
