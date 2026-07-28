@@ -19,6 +19,8 @@ width: 100%;
 main{
     width: 100%;
   min-height: 100vh;
+  overflow: hidden;
+
   background-color: #FBF9EB;
   /* padding: 1rem 1rem; */
 }
@@ -235,8 +237,9 @@ width: clamp(15rem, 18vw, 20rem);
 .card-container1:nth-of-type(3) h2{
   font-size: 1.4rem;
 }
+
 .card-container1:nth-of-type(3) {
-  height: 57.5vh;
+  height: 58.6vh;
   }
 .card-container1:nth-of-type(3) .card {
     background: #B1E8C1;
@@ -392,8 +395,8 @@ padding: 5rem 1rem;
   width: 180px;
     max-width: 100%;
     position: relative;
-    left:clamp(5rem,28vw,10rem);
-
+    left:clamp(5rem,28vw,12rem);
+    top: -19%;
 }
 .s4-cen{
   display: flex;
@@ -402,7 +405,7 @@ padding: 5rem 1rem;
 }
 .s4-cen h1{
   text-align: center;
-  transform: rotate(-3deg) scaleY(1.1);
+  transform: rotate(-2deg) scaleY(1.1);
   word-spacing: 1px;
   background-color: #99c0f3;
   border: 2px solid black;
@@ -427,42 +430,274 @@ transform: scaleY(1.1);
   width: clamp(10rem,82vw,20rem);
 }
 
-.s4-end{
-  height: 34vh;
-  display: flex;
-  background-color: red;
-  align-items: center;
-  gap: 1.5rem;
-  justify-content: space-between;
+.s4-img-box{
+  background-color: #c14c15;
+  height: 38vh;
+  display: grid;
 }
-.s4-end-child{
-    display: flex;
+.s4-end{
+  height: 45vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "s4-end-child1 s4-end-child2"
+  "s4-end-child3 s4-end-child3";
+}
+.s4-end-child1 {
+  grid-area: s4-end-child1;
+  display: flex;
   align-items: center;
+  justify-content: center; /* Added for vertical centering */
   flex-direction: column;
   gap: 1rem;
 }
-.s4-end-child h5{
+
+.s4-end-child2 {
+  grid-area: s4-end-child2;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Added for vertical centering */
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.s4-end-child3 {
+  grid-area: s4-end-child3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.s4-end-child1 h5 ,.s4-end-child2 h5,.s4-end-child3 h5{
   text-align: center;
   font-size: 0.8rem;
 }
-.s4-c-c-circle{
-  height: 14vh;
-  width: 60%;
-  background-color:#B6E241;
+/* ✅ Fix for perfect circles */
+.s4-c-c-circle1,
+.s4-c-c-circle2,
+.s4-c-c-circle3 {
+  height: 15vh;
+  aspect-ratio: 1 / 1; /*Locks width to equal height automatically*/
   border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.s4-c-c-circle1 {
+
   background-image: url(./Quality_without_pretense.svg);
-  background-position: center;
-  background-size: cover;
 }
-.s4-end-u .s4-end-child:nth-child(2) .s4-c-c-circle{
+
+.s4-c-c-circle2 {
   background-image: url(./care_for_ppl_1.svg);
+}
+
+.s4-c-c-circle3 {
+  background-image: url(./transparent_sourcing.svg);
+
+}
+.s4-btn1 {
+  padding: 1rem  35%;
+  border-radius: 30px;
+  font-size:1.4rem;
+  transition: all ease-in-out 0.2s;
+  
+  /* 🔒 Prevents text from wrapping into multiple lines */
+  white-space: nowrap; 
+}
+.s4-btn1:hover{
+  background-color: #2A2857;
+  color: white;
+}
+
+  .section-5 {
+min-height: 94vh;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 0.8fr 1.4fr;
+grid-template-areas: 
+"s5-img"
+"s5-content";
+}
+.s5-img{
+  grid-area: s5-img;
+  background-color: #99c0f3;
+  background-image: url(https://www.twoleavestea.com/cdn/shop/files/Our_Cafe_Wholesale_Partners.webp?v=1773753185&width=1350.0);
   background-position: center;
   background-size: cover;
 }
-.s4-end-child:nth-child(3) .s4-c-c-circle{
+
+.s5-content {
+  grid-area: s5-content;
+  background-color: #2A2857;
+  padding: 1.5rem 0rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;                  /* Slightly reduced gap for safer vertical spacing */
+  flex-direction: column;
+  box-sizing: border-box;    /* Ensures internal padding doesn't swell the container width */
+}
+.s5-content h1{
+ text-align: center;
+ font-family:reck;
+ font-size: clamp(2rem,17vw,3.5rem);
+ color: white;
+ font-weight: 100;
+}
+.s5-content p{
+   text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+ width: 75vw;
+ font-size:22px;
+ color: white;
+ font-weight: 500;
+}
+.s5-btn{
+  padding: 1rem 5.8rem;
+  align-self: center;
+  white-space: nowrap; 
+  border-radius: 30px;
+  font-size: 1rem;
+
+}
+  .section-6{
+    min-height: 130vh;
+    background-color: #9F6429 ;
+    display: grid;
+    grid-template-columns: 1fr;
+   grid-template-rows: 2fr 3fr;
+   grid-template-areas: 
+   "s6-upper"
+   "s6-lower";
+  }
+  .s6-upper{
+    grid-area: s6-upper;
+    padding: 4rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    flex-direction: column;
+
+  }
+  .s6-upper  #h11{
+    display: inline-block;
+    padding: 0rem 0.1rem;
+     background-color: #FFCB96;
+  border-radius: 5px;
+  transform: rotate(-2.5deg) scaleY(1.5) scaleX(1.6);
+  word-spacing:2px;
+  border: 1px solid black;
+  font-size:clamp(1rem,8vw,5rem);
+  color: #000;
+   font-weight:900;
+  font-family: mid;
+  }
+  .s6-upper #h12{
+    text-align: center;
+    color: white;
+    font-family: mid;
+    font-size: clamp(3rem,19vw,4rem);
+    line-height: 3.5rem;
+  }
+   .s6-upper p{
+    color: white;
+   }
+  .s6-lower{
+    grid-area: s6-lower;
+    /* background-color: #9f8b73; */
+    padding: 3rem 1rem;
+    padding-top: 8rem;
+
+  }
+  .s6-lower-child{
+    border-radius: 15px;
+    height: 65vh;
+    background-color: #FFCB96;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    padding: 0.5rem 26px;
+  }
+  .s6-lower-child #lh11{
+     background-color: #F09F54;
+  border-radius: 5px; 
+  line-height: 3rem;
+  transform: rotate(-3deg);
+  word-spacing:1px;
+  border-radius: 1px solid black;
+  font-size:clamp(1rem,13vw,5rem);
+  color: #000;
+   font-weight:900;
+  font-family: mid;
+  }
+  .s6-img{  
+      width: 70vw;
+      transform: scale(1.5);
+  left: -5rem;
+position: relative;
+     bottom: clamp(2.3rem,2.2%,20rem);
+    }
+   .s6-lower-child #lh12{
+
+    font-family: reck;
+    font-weight: 100;
+    font-size: clamp(2.5rem,12vw,8rem);
+    width: 43vw;
+    text-align: center;
+   }
+   .s6-lower-child p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    /* transform: scaleY(0.9); */
+    width: 72%;
+    /* font-size: clamp(0.8rem,6vw,1.3rem); */
+    text-align: center;
+  
+   }
+   .s6-btn{
+    padding: 0.7rem 70px;
+    background-color: white;
+    font-size:clamp(0.4rem,8vw,2rem);
+    line-height: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: wrap;
+    border-radius: 30px;
+    transform: scaleY(0.9) scaleX(0.9);
+    border: none;
+   }
+ @media (min-width:412px) {
+  .s4-end{
+  height: 25vh;
+  width: 95vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas: 
+  "s4-end-child1 s4-end-child2 s4-end-child3";
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ .s4-end-child1 h5 ,.s4-end-child2 h5,.s4-end-child3 h5{
+  text-align: center;
+  font-size: 0.8rem;
+  width: 5rem;
+}
+.s4-c-c-circle3 {
   background-image: url(./transparent_sourcing.svg);
-  background-position: center;
-  background-size: cover;
+   height: 7.3rem;
+   position: relative;
+   margin-top: -12%;
+
 }
 @media (min-width:768px) {
   .s2-card-tags::-webkit-scrollbar {
@@ -516,7 +751,59 @@ transform: scaleY(1.1);
    font-family: reck;
   }
 
+.s4-cen2 h1{
+  font-size: 5rem;
+  line-height: 4rem;
+  font-family: mid;
+font-weight: 900;
+text-align: center;
+transform: scaleX(1.1);
+}
 
+ .s4-end{
+  width: 55vw;
+ }
+ .s4-btn1 {
+  padding: 1rem  43%;
+  border-radius: 30px;
+  font-size:1.3rem;
+  transition: all ease-in-out 0.2s;
+  
+  /* 🔒 Prevents text from wrapping into multiple lines */
+  white-space: nowrap; 
+}
+ .s4-leftdiv img{
+  width: 180px;
+    max-width: 100%;
+    position: relative;
+    left:clamp(5rem,38vw,25rem);
+    top: -19%;
+}
+  .section-5 {
+width: 100%;
+height: 100vh;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 2fr 1fr;
+grid-template-areas: 
+"s5-img"
+"s5-content";
+}
+.s5-content h1{
+ text-align: center;
+ font-family:reck;
+ width: 45vw;
+ font-size: clamp(2rem,6vw,3.5rem);
+ color: white;
+ font-weight: 100;
+}
+.s5-btn{
+  padding: 1rem 5.8rem;
+  align-self: center;
+  white-space: nowrap; 
+  border-radius: 30px;
+  font-size: 1rem;
+}
 @media (min-width:1024px) {
   nav{
 /* width: min(95% ,1200px);  use in mobile 1 approch */ 
@@ -650,7 +937,8 @@ color: #f3efef;
    
 }
  .card-container1:nth-child(2){
-  height: 65vh;
+  height: 68vh;
+
  }
   .card-container1:nth-child(2) .card{
     height: 43.5vh;
@@ -712,4 +1000,86 @@ color: #f3efef;
   .s3-2h1{
     font-size: clamp(3rem ,4.2vw,7rem);
   }
+
+   .s4-end{
+  width: clamp(15rem,45vw,35rem);
+ }
+ .s4-btn1 {
+  padding: 1rem 7%;
+  border-radius: 30px;
+  font-size:1.3rem;
+  transition: all ease-in-out 0.2s;
+  
+  /* 🔒 Prevents text from wrapping into multiple lines */
+  white-space: nowrap; 
+}
+ .s4-leftdiv img{
+  width: 180px;
+    max-width: 100%;
+    position: relative;
+    left:clamp(5rem,38vw,45rem);
+    top: -19%;
+}
+.s4-c-c-circle3 {
+  background-image: url(./transparent_sourcing.svg);
+  width: 8.5rem;
+  height: 8.5rem;
+}
+.s4-cen3 p{
+  font-size: 4rem;
+  font-weight: 200;
+ font-family:reck;
+  text-align: center;
+  width: clamp(10rem,88vw,99rem);
+  /* background-color: #212043; */
+}
+  .section-5 {
+width: 100%;
+height: 80vh;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows:  1fr;
+grid-template-areas: 
+"s5-img s5-content";
+}
+.s5-img{
+  grid-area: s5-img;
+
+  background-image: url(https://www.twoleavestea.com/cdn/shop/files/Our_Cafe_Wholesale_Partners.webp?v=1773753185&width=1350.0);
+  background-position: center;
+  background-size: cover;
+}
+
+.s5-content {
+  grid-area: s5-content;
+  background-color: #2A2857;
+  padding: 1.5rem 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5vh;                  /* Slightly reduced gap for safer vertical spacing */
+  flex-direction: column;
+  box-sizing: border-box;    /* Ensures internal padding doesn't swell the container width */
+}
+.s5-content h1{
+text-align: start;
+ font-family:reck;
+ font-size: clamp(2rem,17vw,5.5rem);
+ color: white;
+ width: 40vw;
+ font-weight: 100;
+}
+.s5-content p{
+  text-align: start;
+ width: 25vw;
+}
+
+.s5-btn{
+  align-self: start;
+  padding: 1rem 5rem;
+  white-space: nowrap; 
+  border-radius: 30px;
+  font-size: 1rem;
+
+}
 }
