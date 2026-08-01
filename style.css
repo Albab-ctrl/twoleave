@@ -896,14 +896,14 @@ gap: 1rem;
   flex-direction: column;
   align-items: self-start;
    gap: 2rem;
-   padding: 1rem 1rem;
+   padding: 1rem 2rem;
    border-radius: 15px;
 }
 .s9-upper .s9-u-child1{
  display: flex;
   flex-direction: column;
   align-items: self-start;
- gap: 1.5rem;
+ gap: 1.8rem;
 
 }
 .s9-u-child1 h1{
@@ -982,6 +982,31 @@ gap: 1rem;
 }
 .s9-lower p{
   display: none;
+}
+footer{
+  display: flex;
+  width: 100%;
+  min-height: 50vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  background-image: url(./footer-img.png);
+  background-size: cover;
+  background-position: center;
+
+}
+
+footer img{
+  width: 13rem;
+}
+footer h6{
+  text-align: center;
+  opacity: 0.6;
+  font-family: reck;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+
 }
  @media (min-width:412px) {
   .s4-end{
