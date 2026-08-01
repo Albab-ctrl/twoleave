@@ -1784,8 +1784,8 @@ width:18rem;
 }
 /* section-9 */
 .section-9{
-  max-height: 80vh;
-  gap: 20px ;
+  min-height:60vh;
+
 }
 .s9-upper{
   width: 60%;
@@ -1835,8 +1835,12 @@ width:18rem;
    gap: 2rem;
    padding: 1rem 1rem;
    border-radius: 15px;
+   min-height: 30vh;
 }
 .s9-lower .s9-l-tea{
+   flex-wrap: nowrap;
+
+  flex-shrink: 1;
   border: none; 
 }
 .s9-l-tea h1{
@@ -1848,14 +1852,18 @@ width:18rem;
   justify-content: space-between;
   color: white;
   font-weight: 200;
-
+}
+.s9-l-tea:nth-child(7) h1{
+  font-size: 1.3rem;
 }
 .s9-l-tea h1 i{
   display: none;
 }
 .s9-lower p{
-  display:inline-block;
+  display:block;
+  margin-top: 0.4rem;
   color: white;
-  opacity: 0.7;
+  opacity: 0.5;
+  font-weight: 300;
 }
   }
